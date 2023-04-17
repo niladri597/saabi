@@ -11,7 +11,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-const session = await getServerSession(authOptions);
+// const session = await getServerSession(authOptions);
 
 
   return (
@@ -20,10 +20,10 @@ const session = await getServerSession(authOptions);
       <body>
 
 
-        <SessionProvider session={session}>
-        {!session ? ( 
-          <Login />
-        ) : ( 
+        {/* <SessionProvider session={session}> */}
+        {/* {!session ? (  */}
+          {/* <Login /> */}
+        {/* ) : (  */}
 
           <div className='flex'>
           {/* Sidebar */}
@@ -35,11 +35,11 @@ const session = await getServerSession(authOptions);
 
           <div className='bg-[#343541] flex-1'>{children}</div>
         </div>
-         )}
+         {/* )} */}
         
 
         
-        </SessionProvider>
+        {/* </SessionProvider> */}
       </body>
     </html>
   )
